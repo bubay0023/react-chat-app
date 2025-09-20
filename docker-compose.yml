@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  react_app:
+    build: .
+    container_name: react_app_1
+    ports:
+      # Expose the app on port 3000 of the host machine
+      - "3000:80"
+    networks:
+      - shared_net
+
+networks:
+  shared_net:
+    external: true
+    name: my-shared-network
