@@ -14,7 +14,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8001/ask', {
+      const response = await fetch('http://20.119.81.24/:8001/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
